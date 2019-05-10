@@ -43,8 +43,9 @@ main {
 
 nav{
   z-index: 1;
+  position: relative;
   background-color: white !important;
-  box-shadow: 1px 1px 4px #888888;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 section{
@@ -258,14 +259,26 @@ nav{
 }
 
 .dropshadow{
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.hovershadow:hover{
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: 0.2s;
 }
 
 /* ======================== 3.5 Sections ======================== */
 #section1container{
+  padding: 1rem 1rem;
+  background-color: white;
+}
+
+#section2container{
   z-index: -10;
   padding: 1rem 1rem;
 }
+
+
 
 /* ========================  4. Media queries ======================== */
 
@@ -280,7 +293,7 @@ nav{
 @media screen and (min-width: 60em) {
     
   /* limit size of content area */
-  main{
+  section{
     max-width: 1280px;
     margin: 0 auto;
   }
@@ -322,7 +335,7 @@ nav{
 @media screen and (min-width: 100em) {
    
   /* limit size of content area */
-  main{
+  ssection{
     max-width: 1280px;
     margin: 0 auto;
   }
@@ -339,7 +352,7 @@ nav{
 @media screen and (min-width: 120em) {
  
   /* limit size of content area */
-  main{
+  section{
     max-width: 1600px;
     margin: 0 auto;
   }
