@@ -23,23 +23,23 @@ body {
   font-size: 1em; /* 16px Base font size */
   line-height: 1.5em; /* 24px = 18px * 1.334em - Base line height */
   text-rendering: optimizeLegibility;
-  margin-top:64px;
 }
 
 .wrapper{
   width: 100%;
   height: auto;
+  background-color: #e5e5e5;
 }
 
 main {
   width: 100%;
-  background-color: #e5e5e5;
   overflow: hidden;
   padding: 0 1rem;
 }
 
 nav{
   z-index: 1;
+  background-color: white !important;
 }
 
 section{
@@ -194,14 +194,55 @@ nav{
   background-color: white;
 }
 
-/* Company name/logo */
-#logo{
-
+.menubtn{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  padding: 14px 16px;
+  background-color: white;
 }
 
 /* Hamburger menu */
 #hamburgermenu{
   font-weight: 900;
+}
+
+#hamburgermenubtn{
+  float: left;
+  cursor: pointer;
+}
+
+/* Company logo */
+#logo{
+
+}
+
+#logobtn{
+  float: left;
+  cursor: pointer;
+}
+
+/* Navigation items */
+.navitemlist{
+  clear:both;
+  text-align: right;
+}
+
+.navitemlist li{
+  text-align: center;
+}
+
+.navitemlist li a{
+  display: block;
+  color: black;
+  background-color: grey;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navitemlist li a:hover {
+  background-color: darkgray;
 }
 
 
@@ -216,16 +257,74 @@ nav{
 
 /* ================ 960px Break Point 2: Medium or larger ================ */
 @media screen and (min-width: 60em) {
+    
+  /* limit size of content area */
+  main{
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .topnav{
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  /* hide hamburger menu */
+  #hamburgermenubtn{
+    display: none;
+  }
+  /* move menu items to top */
+  /* Navigation items */
+  .navitemlist{
+    clear: none;
+  }
+
+  .navitemlist li{
+    display: inline-block;
+  }
+
+  .navitemlist li a{
+    color: black;
+    background-color: white;
+  }
+
+  .navitemlist li a:hover {
+    background-color: lightgray;
+  }
 
 }
 
 
 /* =============== 1600px Break Point 3: large =============== */
 @media screen and (min-width: 100em) {
-
+   
+  /* limit size of content area */
+  main{
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .topnav{
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  /* */
 }
 
 /* ================ 1920px Break Point 4: extra-large ================ */
 @media screen and (min-width: 120em) {
-
+ 
+  /* limit size of content area */
+  main{
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .topnav{
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  /* */
 }
