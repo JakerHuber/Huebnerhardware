@@ -10,12 +10,12 @@ https://material.io/design/typography/the-type-system.html#type-scale
 */
 /* ===================  1. Main HTML Structure =================== */
 
-html {
-  box-sizing: border-box; /* Note: Using border-box instead of content-box */
-}
-
 *, *:before, *:after{
   box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box; /* Note: Using border-box instead of content-box */
 }
 
 body {
@@ -25,27 +25,17 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-.wrapper{
-  width: 100%;
-  height: auto;
-  background-color: #e5e5e5;
-}
-
-.container{
-  width: 100%;
-  height: auto;
+nav{
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  background-color: white !important;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 main {
   width: 100%;
   overflow: hidden;
-}
-
-nav{
-  z-index: 1;
-  position: relative;
-  background-color: white !important;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 section{
@@ -60,6 +50,18 @@ footer{
   color: white;
   text-align: center;
 }
+
+.wrapper{
+  width: 100%;
+  height: auto;
+  background-color: #e5e5e5;
+}
+
+.container{
+  width: 100%;
+  height: auto;
+}
+
 
 /* ========================  2. Scaled fonts ======================== */
 
@@ -193,10 +195,6 @@ img {
 
 
 /* ==========================  3. Navigation ========================== */
-nav{
-  overflow: hidden;
-}
-
 .menubtn{
   border: 0;
   margin: 0;
@@ -205,22 +203,12 @@ nav{
   background-color: white;
 }
 
-/* Hamburger menu */
-#hamburgermenu{
+/* Hamburger menu and logo*/
+.specialbtn{
   font-weight: 900;
 }
 
-#hamburgermenubtn{
-  float: left;
-  cursor: pointer;
-}
-
-/* Company logo */
-#logo{
-
-}
-
-#logobtn{
+.topleftnav{
   float: left;
   cursor: pointer;
 }
@@ -228,25 +216,28 @@ nav{
 /* Navigation items */
 .navitemlist{
   clear:both;
-  text-align: right;
-  display: none;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .navitemlist li{
-  text-align: center;
+  display: inline-block;
 }
 
 .navitemlist li a{
-  display: block;
-  color: black;
-  background-color: grey;
-  color: #ffffff;
-  text-align: center;
+  display: inline-block;
   text-decoration: none;
+  color: black;
+  transition: 0.2s;
 }
 
 .navitemlist li a:hover {
-  background-color: darkgray;
+  position: relative;
+  /*background-color: whitesmoke;*/
+  box-shadow:inset 0px -4px 0px 0px grey;
+  transition: 0.2s;
 }
 
 /* Show and Hide classes */
@@ -263,7 +254,7 @@ nav{
 }
 
 .hovershadow:hover{
-   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   transition: 0.2s;
 }
 
@@ -281,23 +272,43 @@ nav{
 
 
 /* ========================  4. Media queries ======================== */
+/* ================ 480px minimum supported resolution ================ */
 
 
-/* ================ 600px Break Point 1: Small or larger ================ */
-@media screen and (min-width: 37.5em) {  
+/* ================ 600px Break Point 1: Extra small ================ */
+@media screen and (min-width: 37.5em) { 
+
+  /* Navigation items */
+  .navitemlist{
+    clear: none;
+    text-align: right;
+    display: block;
+  }
+
+  .navitemlist li a{
+    color: black;
+    background-color: white;
+  }
 
 }
 
 
-/* ================ 960px Break Point 2: Medium or larger ================ */
+/* ================ 840px Break Point 2: Small ================ */
+@media screen and (min-width: 52.5em) { 
+
+
+}
+
+
+/* ================ 960px Break Point 3: Medium ================ */
 @media screen and (min-width: 60em) {
-    
+
   /* limit size of content area */
   section{
     max-width: 1280px;
     margin: 0 auto;
   }
-  
+
   .topnav{
     max-width: 1280px;
     margin: 0 auto;
@@ -307,60 +318,51 @@ nav{
   #hamburgermenubtn{
     display: none;
   }
-  
-    /* Navigation items */
-  /* show and move menu items to top*/
-  .navitemlist{
-    clear: none;
-    display: block;
-  }
-
-  .navitemlist li{
-    display: inline-block;
-  }
-
-  .navitemlist li a{
-    color: black;
-    background-color: white;
-  }
-
-  .navitemlist li a:hover {
-    background-color: lightgray;
-  }
 
 }
 
+/* ================ 1280px Break Point 4: Medium-large ================ */
+@media screen and (min-width: 80em) { 
 
-/* =============== 1600px Break Point 3: large =============== */
+
+}
+
+/* ================ 1440px Break Point 5: Medium-large ================ */
+@media screen and (min-width: 90em) { 
+
+
+}
+
+/* =============== 1600px Break Point 6: Extra large =============== */
 @media screen and (min-width: 100em) {
-   
+
   /* limit size of content area */
-  ssection{
+  section{
     max-width: 1280px;
     margin: 0 auto;
   }
-  
+
   .topnav{
     max-width: 1280px;
     margin: 0 auto;
   }
-  
+
   /* */
 }
 
 /* ================ 1920px Break Point 4: extra-large ================ */
 @media screen and (min-width: 120em) {
- 
+
   /* limit size of content area */
   section{
     max-width: 1600px;
     margin: 0 auto;
   }
-  
+
   .topnav{
     max-width: 1600px;
     margin: 0 auto;
   }
-  
+
   /* */
 }
