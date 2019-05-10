@@ -31,20 +31,24 @@ body {
   background-color: #e5e5e5;
 }
 
+.container{
+  width: 100%;
+  height: auto;
+}
+
 main {
   width: 100%;
   overflow: hidden;
-  padding: 0 1rem;
 }
 
 nav{
   z-index: 1;
   background-color: white !important;
+  box-shadow: 1px 1px 4px #888888;
 }
 
 section{
-  margin: 1rem 0;
-  padding: 1rem;
+  padding: 1rem 1rem;
   background-color: white;
   overflow: hidden;
 }
@@ -190,8 +194,6 @@ img {
 /* ==========================  3. Navigation ========================== */
 nav{
   overflow: hidden;
-  box-shadow: 1px 1px 4px #888888;
-  background-color: white;
 }
 
 .menubtn{
@@ -255,6 +257,15 @@ nav{
   display: none;
 }
 
+.dropshadow{
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* ======================== 3.5 Sections ======================== */
+#section1container{
+  z-index: -10;
+  padding: 1rem 1rem;
+}
 
 /* ========================  4. Media queries ======================== */
 
