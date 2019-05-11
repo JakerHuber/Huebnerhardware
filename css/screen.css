@@ -55,6 +55,13 @@ section{
   height: auto;
 }
 
+.container-half{
+  width: 48%;
+  height: auto;
+  display: inline-block;
+  justify-content: space-between;
+}
+
 footer{
   width: 100%;
   height: auto;
@@ -266,6 +273,11 @@ img {
   text-align: right;
 }
 
+.centered{
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* Show and Hide classes */
 .show{
   display: block;
@@ -332,6 +344,22 @@ footer div{
 footer div p.caption{
   line-height: 2.25rem;
   padding-left: 1rem;
+}
+
+/* flex */
+.flexing{
+  display: flex;
+}
+
+.bigbutton{
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: 0.2s;
+}
+
+.bigbuttonhover:hover{
+  box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
+  transition: 0.2s;
+  background-color: #efefef;
 }
 
 /* ======================== 3.6 Drawer ============================== */
@@ -565,6 +593,11 @@ footer div p.caption{
     margin: 0 auto;
   }
 
+  .container-half{
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
 }
 
 /* ================ 1440px Break Point 5: Medium-large ================ */
@@ -599,6 +632,12 @@ footer div p.caption{
     max-width: 1280px;
     margin: 0 auto;
   }
+  
+  .container-half{
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  
 
   /* */
 }
@@ -609,6 +648,11 @@ footer div p.caption{
   /* limit size of content area */
   .container{
     max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .container-half{
+    max-width: 800px;
     margin: 0 auto;
   }
 
