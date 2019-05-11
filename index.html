@@ -3,6 +3,8 @@
   <head>
     <title>Home</title>
     <meta charset="utf-8" />
+    <meta name="description" content="">
+    <meta name="author" content="Jacob Huebner">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -11,6 +13,7 @@
     <link rel="stylesheet" media="screen" href="css/resets.css" />
     <link rel="stylesheet" media="screen" href="css/screen.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script async src="js/js_cardflip.js"></script>
     <!-- <script async src="js_homepage.js"></script> -->
   </head>
   <body>
@@ -30,7 +33,7 @@
               <li><p class="drawertitlebtn">Main pages</p></li>
               <li><a class="body2 drawerbtn" href="index.html">Home</a></li>
               <li><a class="body2 drawerbtn" href="#">Bio</a></li>
-              <li><a class="body2 drawerbtn" href="#">Portfolio</a></li>
+              <li><a class="body2 drawerbtn" href="#">Projects</a></li>
               <li><a class="body2 drawerbtn" href="#">Contact</a></li>
             </ul>
           </aside>
@@ -41,7 +44,7 @@
           <ul id="topnavitemlist" class="navitemlist">
             <li><a class="button menubtn active" href="index.html">Home</a></li>
             <li><a class="button menubtn" href="#">Bio</a></li>
-            <li><a class="button menubtn" href="#">Portfolio</a></li>
+            <li><a class="button menubtn" href="#">Projects</a></li>
             <li><a class="button menubtn" href="#">Contact</a></li>
           </ul>
         </div>
@@ -57,12 +60,33 @@
           </div>
         </section>
         <!-- section 2 -->
+        <section>
+          <div class="container white frame hovershadow">
+            <!-- start card flip-->
+            <div id="thecard" class="scene scene-card">
+              <div class="card">
+                <!-- front -->
+                <div class="card_face card_face-front">
+                  <p>Front</p>
+                </div>
+                <!-- back -->
+                <div class="card_face card_face-back">
+                  <div id="thebackcard">
+                    <p>Back</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end card flip-->
+          </div>
+        </section>
+        <!-- section 3 -->
         <section class="lightgrey">
           <div class="container frame hovershadow">
             <h2 class="margin">I'm doing good, thanks for asking.</h2>
           </div>
         </section>
-        <!-- section 3 -->
+        <!-- section 4 -->
         <section class="grey">
           <div class="container white frame dropshadow">
             <p class="margin">Updog? What's updog?</p>
