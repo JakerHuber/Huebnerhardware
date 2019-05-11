@@ -55,13 +55,13 @@ $(document).ready(function() {
     }
     else if((my < topside && !topcheck) || flippedtop){
       thebackcard.classList.toggle('is-flipped-text-top');
-      setTimeout(function(){card.classList.toggle('is-flipped-top');},50); 
+      setTimeout(function(){card.classList.toggle('is-flipped-top');},70); 
       if(flippedtop){flippedtop = false;}
       else{flippedtop = true;}
     }
     else if((my >= bottomside && !bottomcheck) || flippedbottom){
       thebackcard.classList.toggle('is-flipped-text-bottom');
-      setTimeout(function(){card.classList.toggle('is-flipped-bottom');},50); 
+      setTimeout(function(){card.classList.toggle('is-flipped-bottom');},70); 
       if(flippedbottom){flippedbottom = false;}
       else{flippedbottom = true;}
     }
