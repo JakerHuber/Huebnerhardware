@@ -208,6 +208,7 @@ img {
 /* Hamburger menu and logo */
 .specialbtn{
   font-weight: 900;
+  font-size: 20px
 }
 
 /* Navigation items */
@@ -280,6 +281,7 @@ img {
 .hovershadow:hover{
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   transition: 0.2s;
+  transition-delay: 0.3s;
 }
 
 
@@ -332,8 +334,9 @@ footer div p.caption{
   opacity: 0;
 }
 
-/* drawer menu pane - note the 0px width */
+/* drawer menu pane */
 #drawer {
+  z-index: 3;
   position: fixed;
   top: 0;
   left: -300px;
@@ -349,7 +352,7 @@ footer div p.caption{
 
 #drawer-toggle:checked{
   height: 100%;
-  width: calc(100% - 300px);
+  width: calc(100%);
   background: rgba(255, 255, 255, .8);
 }
 
@@ -357,12 +360,25 @@ footer div p.caption{
   left: 0px;
 }
 
-/* test hack */
-#drawer-toggle-label{
-  z-index: 2;
-  position: relative;
+#drawer-toggle:checked ~ #drawer-toggle-label{
+  position: fixed;
+  height: 100%;
+  width: calc(100%);
+  color: black;
+  background-color: black;
+  opacity: .3;
+  transition-property: background;
+  transition-duration: .2s;
+  transition-timing-function: linear;
 }
 
+#drawer-toggle:checked ~ #drawer-toggle-label{
+  
+}
+
+#drawer-toggle:checked ~ #logo{
+  margin-left: 51.3px;
+}
 
 /* ========================  4. Media queries ======================== */
 /* ================ 480px minimum supported resolution ================ */
@@ -406,7 +422,25 @@ footer div p.caption{
 
 /* ================ 1440px Break Point 5: Medium-large ================ */
 @media screen and (min-width: 90em) { 
+  
+  /* hide hamburger menu */
+  #drawer-toggle-label{
+    display: none;
+  }
+  
+  #drawer-toggle{
+    display: none;
+  }
+  
+  #drawer{
+    display: none;
+  }
+  
+  #drawer-toggle:checked ~ #logo{
+    margin-left: 0;
+  }
 
+  /* more to come */
 
 }
 
