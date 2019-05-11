@@ -16,8 +16,22 @@
       <!-- START NAVIGATION -->
       <nav>
         <div class="container">
-          <button class="menubtn left"><i class="fa fa-bars button specialbtn"></i></button>
+          <!-- hamburger menu -->
+          <input type="checkbox" id="drawer-toggle" name="drawer-toggle">
+          <label for="drawer-toggle" id="drawer-toggle-label" class="menubtn left"><i class="fa fa-bars button specialbtn"></i></label>
+          <!-- START ASIDE DRAWER -->
+          <aside id="drawer" class="smooth">
+            <ul>
+              <li><a href="#">Menu Item</a></li>
+              <li><a href="#">Menu Item</a></li>
+              <li><a href="#">Menu Item</a></li>
+              <li><a href="#">Menu Item</a></li>
+            </ul>
+          </aside>
+          <!-- END ASIDE DRAWER -->
+          <!-- logo -->
           <button class="menubtn left"><h1 id="logo" class="button">Company</h1></button>
+          <!-- nav menu items -->
           <ul id="topnavitemlist" class="navitemlist">
             <!-- nav item 1 -->
             <li>
