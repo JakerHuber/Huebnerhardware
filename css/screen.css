@@ -203,6 +203,7 @@ img {
   padding: 0;
   padding: 14px 16px;
   background-color: white;
+  color: black;
 }
 
 /* Hamburger menu and logo */
@@ -284,6 +285,18 @@ img {
   transition-delay: 0.3s;
 }
 
+/* padding */
+.padtop{
+  padding: 2rem 0 0 0;
+}
+
+.padbottom{
+  padding: 0 0 2rem 0;
+}
+
+.padtopbottom{
+  padding: 2rem 0 2rem 0;
+}
 
 /* ======================== 3.5 Sections ======================== */
 /* frame */
@@ -311,7 +324,26 @@ footer div p.caption{
   padding-left: 1rem;
 }
 
-/* ======================== 3.6 Drawer ============================== 
+/* ======================== 3.6 Drawer ============================== */
+
+/* drawer buttons */
+.drawerbtn{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  padding: 12px 32px;
+  background-color: white;
+  color: grey;
+}
+
+.drawertitlebtn{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  padding: 12px 32px;
+  background-color: white;
+  color: black;
+}
 
 /* smooth animations (borrowed)*/
 .smooth{
@@ -334,6 +366,11 @@ footer div p.caption{
   opacity: 0;
 }
 
+/* changes transition color to be more subtle */
+#drawer-toggle-label{
+  background-color: rgba(0, 0, 255, 0);
+}
+
 /* drawer menu pane */
 #drawer {
   z-index: 3;
@@ -342,14 +379,13 @@ footer div p.caption{
   left: -300px;
   height: 100%;
   width: 300px;
-  background: grey;
+  background: white;
   overflow-x: hidden;
   overflow-y: scroll;
-  padding: 20px;
+
 }
 
 /* checked styles (menu open state) */
-
 #drawer-toggle:checked{
   height: 100%;
   width: calc(100%);
@@ -360,24 +396,42 @@ footer div p.caption{
   left: 0px;
 }
 
+/* edit drawer when checked */
 #drawer-toggle:checked ~ #drawer-toggle-label{
   position: fixed;
   height: 100%;
   width: calc(100%);
   color: black;
   background-color: black;
-  opacity: .3;
+  opacity: .5;
   transition-property: background;
   transition-duration: .2s;
   transition-timing-function: linear;
 }
 
-#drawer-toggle:checked ~ #drawer-toggle-label{
-  
-}
-
+/* fix moved company logo */
 #drawer-toggle:checked ~ #logo{
   margin-left: 51.3px;
+}
+
+/* Drawer menu items */
+.draweritemlist{
+  display: block;
+  border-bottom: 1px solid lightgray;
+}
+
+.draweritemlist li{
+  display: block;
+}
+
+.draweritemlist li a{
+  display: block;
+  text-decoration: none;
+  background-color: white;
+}
+
+.draweritemlist li a:hover {
+  background-color: whitesmoke;
 }
 
 /* ========================  4. Media queries ======================== */
@@ -422,20 +476,20 @@ footer div p.caption{
 
 /* ================ 1440px Break Point 5: Medium-large ================ */
 @media screen and (min-width: 90em) { 
-  
+
   /* hide hamburger menu */
   #drawer-toggle-label{
     display: none;
   }
-  
+
   #drawer-toggle{
     display: none;
   }
-  
+
   #drawer{
     display: none;
   }
-  
+
   #drawer-toggle:checked ~ #logo{
     margin-left: 0;
   }
