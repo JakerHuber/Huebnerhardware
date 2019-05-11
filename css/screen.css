@@ -44,13 +44,6 @@ section{
   overflow: hidden;
 }
 
-footer{
-  padding: 1em;
-  background-color: grey;
-  color: white;
-  text-align: center;
-}
-
 .wrapper{
   width: 100%;
   height: auto;
@@ -60,6 +53,15 @@ footer{
 .container{
   width: 100%;
   height: auto;
+}
+
+footer{
+  width: 100%;
+  height: auto;
+  padding: 1rem 1rem;
+  color: grey;
+  background-color: white;
+  box-shadow: 0px -1.5px 3px -1.5px rgba(0,0,0,0.16);
 }
 
 
@@ -203,14 +205,9 @@ img {
   background-color: white;
 }
 
-/* Hamburger menu and logo*/
+/* Hamburger menu and logo */
 .specialbtn{
   font-weight: 900;
-}
-
-.topleftnav{
-  float: left;
-  cursor: pointer;
 }
 
 /* Navigation items */
@@ -230,6 +227,7 @@ img {
   display: inline-block;
   text-decoration: none;
   color: black;
+  background-color: white;
   transition: 0.2s;
 }
 
@@ -238,6 +236,31 @@ img {
   /*background-color: whitesmoke;*/
   box-shadow:inset 0px -4px 0px 0px grey;
   transition: 0.2s;
+}
+
+/* Highlight current page */
+.active{
+  box-shadow:inset 0px -4px 0px 0px grey;
+  transition: 0.2s;
+}
+
+/* Alignment */
+.left{
+  float: left;
+  cursor: pointer;
+}
+
+.alignleft{
+  text-align: left;
+}
+
+.right{
+  float: right;
+  cursor: pointer;
+}
+
+.alignright{
+  text-align: right;
 }
 
 /* Show and Hide classes */
@@ -249,6 +272,7 @@ img {
   display: none;
 }
 
+/* Shadows */
 .dropshadow{
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -258,18 +282,32 @@ img {
   transition: 0.2s;
 }
 
+
 /* ======================== 3.5 Sections ======================== */
-#section1container{
+/* frame */
+.frame{
   padding: 1rem 1rem;
+}
+
+/* colors */
+.white{
   background-color: white;
 }
 
-#section2container{
-  z-index: -10;
-  padding: 1rem 1rem;
+.grey{
+  background-color: #e5e5e5;
 }
 
+/* footer */
+footer div{
+  display: flex;
+  justify-content: space-between;
+}
 
+footer div p.caption{
+  line-height: 2.25rem;
+  padding-left: 1rem;
+}
 
 /* ========================  4. Media queries ======================== */
 /* ================ 480px minimum supported resolution ================ */
@@ -285,11 +323,6 @@ img {
     display: block;
   }
 
-  .navitemlist li a{
-    color: black;
-    background-color: white;
-  }
-
 }
 
 
@@ -303,27 +336,16 @@ img {
 /* ================ 960px Break Point 3: Medium ================ */
 @media screen and (min-width: 60em) {
 
-  /* limit size of content area */
-  section{
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-
-  .topnav{
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-
-  /* hide hamburger menu */
-  #hamburgermenubtn{
-    display: none;
-  }
-
 }
 
 /* ================ 1280px Break Point 4: Medium-large ================ */
 @media screen and (min-width: 80em) { 
 
+  /* limit size of content area */
+  .container{
+    max-width: 1280px;
+    margin: 0 auto;
+  }
 
 }
 
@@ -337,12 +359,7 @@ img {
 @media screen and (min-width: 100em) {
 
   /* limit size of content area */
-  section{
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-
-  .topnav{
+  .container{
     max-width: 1280px;
     margin: 0 auto;
   }
@@ -354,12 +371,7 @@ img {
 @media screen and (min-width: 120em) {
 
   /* limit size of content area */
-  section{
-    max-width: 1600px;
-    margin: 0 auto;
-  }
-
-  .topnav{
+  .container{
     max-width: 1600px;
     margin: 0 auto;
   }

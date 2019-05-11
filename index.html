@@ -15,14 +15,13 @@
     <div class="wrapper">
       <!-- START NAVIGATION -->
       <nav>
-        <!-- start topnav -->
-        <div class="topnav">
-          <button class="menubtn topleftnav"><i class="fa fa-bars button specialbtn"></i></button>
-          <button class="menubtn topleftnav"><h1 id="logo" class="button">Company</h1></button>
+        <div class="container">
+          <button class="menubtn left"><i class="fa fa-bars button specialbtn"></i></button>
+          <button class="menubtn left"><h1 id="logo" class="button">Company</h1></button>
           <ul id="topnavitemlist" class="navitemlist">
             <!-- nav item 1 -->
             <li>
-              <a id="navbtn1" class="button menubtn" href="index.html">Home</a>
+              <a id="navbtn1" class="button menubtn active" href="index.html">Home</a>
             </li>
             <!-- nav item 2 -->
             <li>
@@ -38,31 +37,32 @@
             </li>
           </ul>
         </div>
-        <!-- end topnav -->
-        <!-- start bottomnav -->
-        <div class="bottomnav">
-        </div>
-        <!-- end bottomnav -->
       </nav>
       <!-- END NAVIGATION -->
-      <!-- START CONTENT -->
+      <!-- START MAIN -->
       <main>
-        <div id="section1container" class="container">
-          <section class="hovershadow">
-            <h2>Hi!</h2>
-          </section>
-        </div>
-        <div id="section2container" class="container">
-          <section class="dropshadow">
+        <!-- section 1 -->
+        <section>
+          <div class="container white frame hovershadow">
+            <h2>Simple.</h2>
+          </div>
+        </section>
+        <!-- section 2 -->
+        <section class="grey">
+          <div class="container white frame dropshadow">
             <h2>How are you?</h2>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
-      <!-- END CONTENT -->
+      <!-- END MAIN -->
+      <!-- START FOOTER -->
+      <footer>
+        <div class="container frame">
+          <p class="button">Huebner Hardware</p>
+          <p class="caption">Jacob Huebner 2019</p>
+        </div>
+      </footer>
+      <!-- END FOOTER -->
     </div>
-    <footer>
-      <p class="caption margin">Site design © 2019 Jacob Huebner</p>
-      <p class="caption margin">All rights reserved</p>
-    </footer>
   </body>
 </html>
