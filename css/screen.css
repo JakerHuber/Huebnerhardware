@@ -204,6 +204,7 @@ img {
   padding: 14px 16px;
   background-color: white;
   color: black;
+  text-decoration: none;
 }
 
 /* Hamburger menu and logo */
@@ -285,6 +286,11 @@ img {
   transition-delay: 0.3s;
 }
 
+section div{
+  transition: 0.6s;
+  transition-delay: 0.2s;
+}
+
 /* padding */
 .padtop{
   padding: 2rem 0 0 0;
@@ -311,6 +317,10 @@ img {
 
 .grey{
   background-color: #e5e5e5;
+}
+
+.lightgrey{
+  background-color: #f5f5f5;
 }
 
 /* footer */
