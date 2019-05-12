@@ -327,8 +327,16 @@ section div{
   background-color: white;
 }
 
+.darkgrey{
+  background-color: #d4d4d4;
+}
+
 .grey{
   background-color: #e5e5e5;
+}
+
+.lightgrey{
+  background-color: #f5f5f5;
 }
 
 .red{
@@ -337,10 +345,6 @@ section div{
 
 .green{
   color: green;
-}
-
-.lightgrey{
-  background-color: #f5f5f5;
 }
 
 /* footer */
@@ -362,12 +366,22 @@ footer div p.caption{
 .bigbutton{
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0,0,0,0.23);
   transition: 0.2s;
+  overflow: hidden;
 }
 
 .bigbuttonhover:hover{
   box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
   transition: 0.2s;
   background-color: #efefef;
+
+}
+
+.largebutton{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
 }
 
 /* ======================== 3.6 Drawer ============================== */
