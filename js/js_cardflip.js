@@ -31,12 +31,12 @@ $(document).ready(function() {
     var y = thecard.offsetHeight;
 
     // Set boundaries
-    var leftside = x/4;
-    var rightside = x - (x/4);
-    var topside = y/2;
-    var bottomside = y - (y/2);
+    var leftside = x/2;
+    var rightside = x - (x/2);
+    var topside = y/3.5;
+    var bottomside = y - (y/3.5);
 
-    
+
     //alert("mx: " + mx + "  my: " + my + "  x: " + x + "  y: " + y );
     // Checks if any other direction is already flipped
     var leftcheck = (flippedright || flippedtop || flippedbottom);
@@ -45,17 +45,7 @@ $(document).ready(function() {
     var bottomcheck = (flippedleft || flippedright || flippedtop);
 
     // Flips it in the direction it was clicked
-    if((mx < leftside && !leftcheck) || flippedleft){
-      card.classList.toggle('is-flipped-left');
-      if(flippedleft){flippedleft = false;}
-      else{flippedleft = true;}
-    }
-    else if((mx >= rightside && !rightcheck) || flippedright){
-      card.classList.toggle('is-flipped-right');
-      if(flippedright){flippedright = false;}
-      else{flippedright = true;}
-    }
-    else if((my < topside && !topcheck) || flippedtop){
+    if((my < topside && !topcheck) || flippedtop){
       thebackcard.classList.toggle('is-flipped-text-top');
       setTimeout(function(){card.classList.toggle('is-flipped-top');},70); 
       if(flippedtop){flippedtop = false;}
@@ -66,6 +56,16 @@ $(document).ready(function() {
       setTimeout(function(){card.classList.toggle('is-flipped-bottom');},70); 
       if(flippedbottom){flippedbottom = false;}
       else{flippedbottom = true;}
+    }
+    else if((mx < leftside && !leftcheck) || flippedleft){
+      card.classList.toggle('is-flipped-left');
+      if(flippedleft){flippedleft = false;}
+      else{flippedleft = true;}
+    }
+    else if((mx >= rightside && !rightcheck) || flippedright){
+      card.classList.toggle('is-flipped-right');
+      if(flippedright){flippedright = false;}
+      else{flippedright = true;}
     }
 
   });
