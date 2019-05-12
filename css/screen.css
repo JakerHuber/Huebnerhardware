@@ -499,6 +499,12 @@ footer div p.caption{
 
 /* ========================  3.7 Card Flip ======================== */
 /* credit Hakim El Hattab */
+#greetingcardbox{
+
+  position: relative;
+  z-index: 2;
+}
+
 .scene {
   width: 100%;
   height: 100%;
@@ -546,21 +552,29 @@ footer div p.caption{
 .card.is-flipped-left {
   transform: rotateY(-180deg);
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  width: 450px;
+  height: 257px;
 }
 
 .card.is-flipped-right {
   transform: rotateY(180deg);
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  width: 450px;
+  height: 257px
 }
 
 .card.is-flipped-top {
   transform: rotateX(180deg);
   box-shadow: 0 -14px 28px rgba(0,0,0,0.25), 0 -10px 10px rgba(0,0,0,0.22);
+  width: 450px;
+  height: 257px
 }
 
 .card.is-flipped-bottom {
   transform: rotateX(-180deg);
   box-shadow: 0 -14px 28px rgba(0,0,0,0.25), 0 -10px 10px rgba(0,0,0,0.22);
+  width: 450px;
+  height: 257px
 }
 
 #thebackcard{
