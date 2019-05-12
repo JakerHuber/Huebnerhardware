@@ -19,12 +19,12 @@ $(document).ready(function() {
   card.addEventListener( 'click', function() {
 
     // Grabs html elements
-    var thecard = document.getElementById("thecard");
+    var thecard = document.getElementById("thecardsize");
     var thebackcard = document.getElementById("thebackcard");
 
     // Gets the location of the where the user clicked on the card
-    var mx = event.clientX - thecard.offsetLeft;
-    var my = event.clientY - thecard.offsetTop;
+    var mx = event.clientX - thecard.getBoundingClientRect().left;
+    var my = event.clientY - thecard.getBoundingClientRect().top;
 
     // Gets size of card
     var x = thecard.offsetWidth;
@@ -36,6 +36,8 @@ $(document).ready(function() {
     var topside = y/2;
     var bottomside = y - (y/2);
 
+    
+    //alert("mx: " + mx + "  my: " + my + "  x: " + x + "  y: " + y );
     // Checks if any other direction is already flipped
     var leftcheck = (flippedright || flippedtop || flippedbottom);
     var rightcheck = (flippedleft || flippedtop || flippedbottom);
