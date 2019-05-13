@@ -485,9 +485,8 @@ footer div p.caption{
 /* ========================  3.7 Card Flip ======================== */
 /* credit Hakim El Hattab */
 #greetingcardbox{
-
   position: relative;
-  z-index: 2;
+  z-index: 0;
 }
 
 .scene {
