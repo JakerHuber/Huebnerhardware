@@ -766,6 +766,16 @@ footer div p.caption{
   transition-delay: 0s;
 }
 
+.project-description-short{
+  max-width: 840px;
+}
+
+.project-banner-image{
+  max-width: 100%;
+  margin: 0 auto;
+  max-height: 500px;
+}
+
 /* block */
 .block{
   display: block;
@@ -810,6 +820,12 @@ footer div p.caption{
     margin: 16px 0;
   }
 
+}
+
+
+/* ================ 840px Break Point 2: Small ================ */
+@media screen and (min-width: 52.4em) { 
+
   /* project showcase */
   .project-showcase-description{
     display: inline-block;
@@ -827,22 +843,6 @@ footer div p.caption{
     padding: 3rem 0 3rem 1rem;
     width: 100%;
   }
-
-  .project-description-short{
-    max-width: 840px;
-  }
-
-  .project-banner-image{
-    max-width: 100%;
-    margin: 0 auto;
-    max-height: 500px;
-  }
-
-}
-
-
-/* ================ 840px Break Point 2: Small ================ */
-@media screen and (min-width: 52.4em) { 
 
 
 }
