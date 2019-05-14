@@ -747,6 +747,25 @@ footer div p.caption{
   top: 0%;
 }
 
+/* project showcase */
+.project-showcase-description{
+  width: 100%;
+  transition-duration: 0s;
+  transition-delay: 0s;
+}
+
+.project-showcase-picture{
+  width: 100%;
+  transition-duration: 0s;
+  transition-delay: 0s;
+}
+
+.project-showcase-picture img{
+  width: 100%;
+  transition-duration: 0s;
+  transition-delay: 0s;
+}
+
 /* block */
 .block{
   display: block;
@@ -765,8 +784,15 @@ footer div p.caption{
 }
 
 /* ========================  4. Media queries ======================== */
-/* ================ 480px minimum supported resolution ================ */
+/* ================ 360px minimum supported resolution ================ */
 
+
+/* ================ 512px Break Point 0: Extra small ================ */
+@media screen and (min-width: 32em) { 
+
+
+
+}
 
 /* ================ 600px Break Point 1: Extra small ================ */
 @media screen and (min-width: 38.2em) { 
@@ -778,23 +804,48 @@ footer div p.caption{
     display: block;
   }
 
+  /* Project grid resize */
+  .project-grid-col{
+    width: 47.7%;
+    margin: 16px 0;
+  }
+
+  /* project showcase */
+  .project-showcase-description{
+    display: inline-block;
+    width: 50%;
+    float: left;
+  }
+
+  .project-showcase-picture{
+    display: inline-block;
+    width: 50%;
+    float: right;
+  }
+
+  .project-showcase-picture img{
+    padding: 3rem 0 3rem 1rem;
+    width: 100%;
+  }
+
 }
 
 
 /* ================ 840px Break Point 2: Small ================ */
 @media screen and (min-width: 52.4em) { 
 
-  /* Project grid resize */
-  .project-grid-col{
-    width: 49.5%;
-    margin: 5px 0;
-  }
 
 }
 
 
 /* ================ 960px Break Point 3: Medium ================ */
 @media screen and (min-width: 60em) {
+
+  /* Project grid resize */
+  .project-grid-col{
+    width: 31.2%;
+    margin: 16px 0;
+  }
 
 }
 
@@ -810,11 +861,6 @@ footer div p.caption{
   .container-half{
     max-width: 640px;
     margin: 0 auto;
-  }
-
-  /* Project grid resize */
-  .project-grid-col{
-    width: 32.8%;
   }
 
 }
