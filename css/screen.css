@@ -26,7 +26,7 @@ body {
 }
 
 nav{
-  z-index: 1;
+  z-index: 2;
   overflow: hidden;
   position: relative;
   background-color: white !important;
@@ -295,6 +295,10 @@ img {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
+.dropshadow1{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
 .hovershadow:hover{
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   transition: 0.2s;
@@ -328,6 +332,10 @@ section div{
 /* colors */
 .white{
   background-color: white;
+}
+
+.darkergrey{
+  background-color: #c3c3c3;
 }
 
 .darkgrey{
@@ -421,7 +429,7 @@ footer div p.caption{
 
 /* drawer menu pane */
 #drawer {
-  z-index: 3;
+  z-index: 4;
   position: fixed;
   top: 0;
   left: -300px;
@@ -661,6 +669,53 @@ footer div p.caption{
   overflow: hidden;
 }
 
+/* ========================= project items =========================== */
+.project-grid{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* images are 480px wide */
+.project-grid img{
+  width: 100%;
+}
+
+.project-grid-col{
+  width: 99.5%;
+  transition: 0s;
+  transition-delay: 0s;
+  margin: 6px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item-content{
+  float: left;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem;
+  color: white;
+  background-color: rgba(50,50,50,0.9);
+  transition-duration: .5s;
+  transition-delay: 0s;
+  opacity: 0;
+  top: -100%;
+}
+
+.project-grid-col:hover .project-item-content{
+  opacity: 1;
+  top: 0%;
+}
+
+/* block */
+.block{
+  display: block;
+}
+
 /* ========================  4. Media queries ======================== */
 /* ================ 480px minimum supported resolution ================ */
 
@@ -680,6 +735,12 @@ footer div p.caption{
 
 /* ================ 840px Break Point 2: Small ================ */
 @media screen and (min-width: 52.4em) { 
+
+  /* Project grid resize */
+  .project-grid-col{
+    width: 49.5%;
+    margin: 5px 0;
+  }
 
 }
 
@@ -703,6 +764,11 @@ footer div p.caption{
     margin: 0 auto;
   }
 
+  /* Project grid resize */
+  .project-grid-col{
+    width: 32.8%;
+  }
+
 }
 
 /* ================ 1440px Break Point 5: Medium-large ================ */
@@ -724,8 +790,6 @@ footer div p.caption{
   #drawer-toggle:checked ~ #logo{
     margin-left: 0;
   }
-
-  /* more to come */
 
 }
 
