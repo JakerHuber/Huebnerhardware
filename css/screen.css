@@ -505,7 +505,7 @@ footer div p.caption{
 }
 
 .card {
-  width: 360px;
+  max-width: 360px;
   height: 206px;
   margin: 0 auto;
   position: relative;
@@ -523,7 +523,6 @@ footer div p.caption{
   backface-visibility: hidden;
   color: black;
   text-align: center;
-  padding: 2rem 2rem;
 }
 
 .card_face-front {
@@ -531,6 +530,7 @@ footer div p.caption{
   justify-content: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .card_face-back {
@@ -583,10 +583,21 @@ footer div p.caption{
   transform: scale(-1, -1);
 }
 
+/* faces */
+#faces{
+  display: flex;
+  justify-content: space-between;
+  font-size-adjust: auto;
+  padding: 0 1rem;
+  text-align: center;
+  overflow: hidden;
+  width:100%;
+  max-width: 300px;
+}
+
 #thecardsize div i{
-  margin-left: 2rem;
-  margin-right: 2rem;
   font-size: 80px;
+  font-size-adjust: auto;
 }
 
 /* drawer buttons */
@@ -597,6 +608,7 @@ footer div p.caption{
   background-color: transparent;
   outline: none;
 }
+
 
 /* ======================== Action Cards =========================== */
 .scene-2 {
