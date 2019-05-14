@@ -67,12 +67,23 @@
         <!-- section 3 -->
         <section class="grey">
           <div class="container white frame dropshadow">
-            <div class="container frame hovershadow">
+            <div class="container frame">
               <h4 class="margin">Contact Form</h4>
-              <p>I'm too afraid to put my personal contact info on the internet so please use this form  instead.</p>
+              <p>You can send me a message by filling in the boxes below.</p>
+              <!-- form begin -->
+              <form id="form" method="get" autocomplete="on">
+                <ol>
+                  <li><input type="text" name="firstname" id="firstname" class="" placeholder="First Name" required></li>
+                  <li><input type="text" name="lastname" id="lastname" class="" placeholder="Last Name"></li>
+                  <li><input type="email" name="email" id="email" class="" pattern="^.+@.+$" placeholder="Email address" required></li>
+                  <li><textarea name="message" id="message" class="" rows="4" cols="50" maxlength="500" placeholder="Message here..."  wrap="hard" required></textarea></li>
+                  <li><input type="submit" name="submit" id="submit" class="button" value="Send Message"></li>
+                </ol>
+              </form>
+              <!-- form end -->
             </div>
           </div>
-        </section>
+        </section>        
       </main>
       <!-- END MAIN -->
       <!-- START FOOTER -->

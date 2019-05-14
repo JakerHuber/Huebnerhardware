@@ -728,6 +728,18 @@ footer div p.caption{
   display: block;
 }
 
+/* ========================  4. Contact Form ======================== */
+
+#form ol li{
+  padding: .5rem 0;
+}
+
+#form ol li input , #form ol li textarea{
+  width: 100%;
+  max-width: 704px;
+  padding: .5rem;
+}
+
 /* ========================  4. Media queries ======================== */
 /* ================ 480px minimum supported resolution ================ */
 
