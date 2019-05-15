@@ -615,7 +615,6 @@ footer div p.caption{
 #faces{
   display: flex;
   justify-content: space-between;
-  font-size-adjust: auto;
   padding: 0 1rem;
   text-align: center;
   overflow: hidden;
@@ -625,7 +624,6 @@ footer div p.caption{
 
 #thecardsize div i{
   font-size: 80px;
-  font-size-adjust: auto;
 }
 
 /* drawer buttons */
