@@ -778,7 +778,8 @@ footer div p.caption{
 }
 
 .project-description-short{
-  max-width: 840px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .project-banner-image{
