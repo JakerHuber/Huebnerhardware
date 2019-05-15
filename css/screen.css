@@ -709,6 +709,11 @@ footer div p.caption{
   overflow: hidden;
 }
 
+/* ============================== bio =============================== */
+.bio-description{
+  max-width: 840px;
+}
+
 /* ========================= project items =========================== */
 .project-grid{
   width: 100%;
