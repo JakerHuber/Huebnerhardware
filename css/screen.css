@@ -305,6 +305,10 @@ img {
   text-align: center;
 }
 
+.aligntextleft{
+  text-align: left;
+}
+
 /* Show and Hide classes */
 .show{
   display: block;
@@ -789,6 +793,10 @@ footer div p.caption{
 }
 
 /* ========================  4. Contact Form ======================== */
+#form{
+  max-width: 704px;
+  margin: 0 auto;
+}
 
 #form ol li{
   padding: .5rem 0;
@@ -796,7 +804,6 @@ footer div p.caption{
 
 #form ol li input , #form ol li textarea{
   width: 100%;
-  max-width: 704px;
   padding: .5rem;
 }
 
