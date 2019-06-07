@@ -86,6 +86,10 @@ h1.margin{
   margin: 0.83em 0;
 }
 
+h1.margintop{
+  margin: 0.83em 0 0 0;
+}
+
 h2 {
   font-size: 3.75em; /* 60px = 16px * 3.75em */
   line-height: 3.75rem;  /* 60px = 16px * 3.75em */
@@ -219,7 +223,7 @@ p.margintop{
 }
 
 
-/* ========================  2. Responsive Media ======================== */
+/* =======================  3. Responsive Media ======================= */
 img, audio, video {
   display: block;
   max-width: 100%;
@@ -230,7 +234,7 @@ img {
 }
 
 
-/* ==========================  3. Navigation ========================== */
+/* ==========================  4. Navigation ========================== */
 .menubtn{
   border: 0;
   margin: 0;
@@ -275,20 +279,17 @@ img {
   transition: 0.2s;
 }
 
-/* Highlight current page */
+/* Highlight nav current page */
 .active{
   box-shadow:inset 0px -4px 0px 0px grey;
   transition: 0.2s;
 }
 
+/* ==========================  5. Formatting ========================== */
 /* Alignment */
 .left{
   float: left;
   cursor: pointer;
-}
-
-.alignleft{
-  text-align: left;
 }
 
 .right{
@@ -296,17 +297,20 @@ img {
   cursor: pointer;
 }
 
+.center{
+  margin: 0 auto;
+}
+
+.alignleft{
+  text-align: left;
+}
+
 .alignright{
   text-align: right;
 }
 
-.centered{
-  margin: 0 auto;
+.aligncenter{
   text-align: center;
-}
-
-.aligntextleft{
-  text-align: left;
 }
 
 /* Show and Hide classes */
@@ -319,7 +323,7 @@ img {
 }
 
 /* Shadows */
-.dropshadow{
+.dropshadow0{
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
@@ -327,15 +331,16 @@ img {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.hovershadow:hover{
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  transition: 0.2s;
-  transition-delay: 0.3s;
+.hovershadow{
+  transition: .5s;
 }
 
-section div{
-  transition: 0.6s;
-  transition-delay: 0.2s;
+.hovershadow:hover{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.hoverdelay{
+  transition-delay: 0.3s;
 }
 
 /* padding */
@@ -351,12 +356,7 @@ section div{
   padding: 2rem 0 2rem 0;
 }
 
-/* ======================== 3.5 Sections ======================== */
-/* frame */
-.frame{
-  padding: 1rem 1rem;
-}
-
+/* ============================  6. Colors ============================ */
 /* colors */
 .white{
   background-color: white;
@@ -386,6 +386,13 @@ section div{
   color: green;
 }
 
+/* =========================== 7. Sections =========================== */
+/* frame */
+.frame{
+  padding: 1rem 1rem;
+}
+
+/* =========================== 8. Footer =========================== */
 /* footer */
 footer div{
   display: flex;
@@ -397,19 +404,18 @@ footer div p.caption{
   padding-left: 1rem;
 }
 
+/* ============================ 9. Flex ============================ */
 /* flex */
 .flexing{
   display: flex;
 }
 
 .bigbutton{
-
   background-color: transparent;
 }
 
 
-/* ======================== 3.6 Drawer ============================== */
-
+/* ======================== 10. Drawer ============================== */
 /* drawer buttons */
 .drawerbtn{
   border: 0;
@@ -518,7 +524,7 @@ footer div p.caption{
   background-color: whitesmoke;
 }
 
-/* ========================  3.7 Card Flip ======================== */
+/* ======================= 11. Card Flip ============================= */
 /* credit Hakim El Hattab */
 #greetingcardbox{
   position: relative;
@@ -544,6 +550,7 @@ footer div p.caption{
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
+/* card sides */
 .card_face {
   position: absolute;
   height: 100%;
@@ -569,6 +576,7 @@ footer div p.caption{
   align-items: center;
 }
 
+/* card transformations */
 .card.is-flipped-left {
   transform: rotateY(-180deg);
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -635,8 +643,7 @@ footer div p.caption{
   outline: none;
 }
 
-
-/* ======================== Action Cards =========================== */
+/* ====================== 12. Action Cards ============================ */
 .scene-2 {
   width: 100%;
   height: 316px;
@@ -707,12 +714,13 @@ footer div p.caption{
   overflow: hidden;
 }
 
-/* ============================== bio =============================== */
+
+/* ========================= 13. Bio ========================== */
 .bio-description{
   max-width: 840px;
 }
 
-/* ========================= project items =========================== */
+/* ======================== 14. project items ========================= */
 .project-grid{
   width: 100%;
   display: flex;
@@ -796,12 +804,7 @@ footer div p.caption{
   display: block;
 }
 
-/* ========================  4. Contact Form ======================== */
-#form{
-  max-width: 704px;
-  margin: 0 auto;
-}
-
+/* ========================  15. Contact Form ======================== */
 #form ol li{
   padding: .5rem 0;
 }
@@ -811,14 +814,17 @@ footer div p.caption{
   padding: .5rem;
 }
 
-/* ========================  4. Media queries ======================== */
-/* ================ 360px minimum supported resolution ================ */
+#formpaper{
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ========================  16. Media queries ======================== */
+/* Note: 360px minimum supported resolution */
 
 
-/* ================ 512px Break Point 0: Extra small ================ */
+/* ============== 512px Break Point 0: Extra Extra small ============== */
 @media screen and (min-width: 32em) { 
-
-
 
 }
 
@@ -929,8 +935,6 @@ footer div p.caption{
     margin: 0 auto;
   }
 
-
-  /* */
 }
 
 /* ================ 1920px Break Point 4: extra-large ================ */
@@ -947,5 +951,4 @@ footer div p.caption{
     margin: 0 auto;
   }
 
-  /* */
 }
