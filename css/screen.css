@@ -285,7 +285,19 @@ img {
   transition: 0.2s;
 }
 
-/* ==========================  5. Formatting ========================== */
+/* =========================== 5. Footer =========================== */
+/* footer */
+footer div{
+  display: flex;
+  justify-content: space-between;
+}
+
+footer div p.caption{
+  line-height: 2.25rem;
+  padding-left: 1rem;
+}
+
+/* ==========================  6. Formatting ========================== */
 /* Alignment */
 .left{
   float: left;
@@ -343,7 +355,7 @@ img {
   transition-delay: 0.3s;
 }
 
-/* padding */
+/* Padding */
 .padtop{
   padding: 2rem 0 0 0;
 }
@@ -356,7 +368,43 @@ img {
   padding: 2rem 0 2rem 0;
 }
 
-/* ============================  6. Colors ============================ */
+/* Images */
+.small-img{
+  max-width: 255px;
+}
+
+/* Frame */
+.frame{
+  padding: 1rem 1rem;
+}
+
+/* ======================== 7. Flex grid ========================= */
+.flex{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.flex img{
+  width: 100%;
+}
+
+/* flex two columns */
+.flex-col-2{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* flex three columns */
+.flex-col-3{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* ============================  8. Colors ============================ */
 /* colors */
 .white{
   background-color: white;
@@ -386,36 +434,7 @@ img {
   color: green;
 }
 
-/* =========================== 7. Sections =========================== */
-/* frame */
-.frame{
-  padding: 1rem 1rem;
-}
-
-/* =========================== 8. Footer =========================== */
-/* footer */
-footer div{
-  display: flex;
-  justify-content: space-between;
-}
-
-footer div p.caption{
-  line-height: 2.25rem;
-  padding-left: 1rem;
-}
-
-/* ============================ 9. Flex ============================ */
-/* flex */
-.flexing{
-  display: flex;
-}
-
-.bigbutton{
-  background-color: transparent;
-}
-
-
-/* ======================== 10. Drawer ============================== */
+/* ======================== 9. Drawer ============================== */
 /* drawer buttons */
 .drawerbtn{
   border: 0;
@@ -524,7 +543,7 @@ footer div p.caption{
   background-color: whitesmoke;
 }
 
-/* ======================= 11. Card Flip ============================= */
+/* ======================= 10. Card Flip ============================= */
 /* credit Hakim El Hattab */
 #greetingcardbox{
   position: relative;
@@ -643,7 +662,7 @@ footer div p.caption{
   outline: none;
 }
 
-/* ====================== 12. Action Cards ============================ */
+/* ====================== 11. Action Cards ============================ */
 .scene-2 {
   width: 100%;
   height: 316px;
@@ -715,47 +734,29 @@ footer div p.caption{
 }
 
 
-/* ========================= 13. Bio ========================== */
+/* ========================= 12. Bio ========================== */
 .bio-description{
   max-width: 840px;
 }
 
-/* ======================== 14. project items ========================= */
-.project-grid{
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-/* images are 480px wide */
-.project-grid img{
-  width: 100%;
-}
-
-.project-grid-col{
-  width: 99.5%;
-  transition: 0s;
-  transition-delay: 0s;
-  margin: 6px 0;
-  position: relative;
-  overflow: hidden;
-}
-
+/* ======================== 13. project items ========================= */
+/* slide down description */
 .project-item-content{
-  float: left;
   position: absolute;
   overflow: scroll;
   overflow-x: hidden;
-  width: 100%;
   height: 100%;
-  padding: 1rem 1rem;
+  padding: 1rem;
   color: white;
   background-color: rgba(50,50,50,0.9);
   transition-duration: .5s;
-  transition-delay: 0s;
   opacity: 0;
   top: -100%;
+}
+
+.flex-col-3:hover .project-item-content{
+  opacity: 1;
+  top: 0%;
 }
 
 /* make scrollbar transparent */
@@ -764,47 +765,7 @@ footer div p.caption{
   background: transparent;
 }
 
-.project-grid-col:hover .project-item-content{
-  opacity: 1;
-  top: 0%;
-}
-
-/* project showcase */
-.project-showcase-description{
-  width: 100%;
-  transition-duration: 0s;
-  transition-delay: 0s;
-}
-
-.project-showcase-picture{
-  width: 100%;
-  transition-duration: 0s;
-  transition-delay: 0s;
-}
-
-.project-showcase-picture img{
-  width: 100%;
-  transition-duration: 0s;
-  transition-delay: 0s;
-}
-
-.project-description-short{
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.project-banner-image{
-  max-width: 100%;
-  margin: 0 auto;
-  max-height: 500px;
-}
-
-/* block */
-.block{
-  display: block;
-}
-
-/* ========================  15. Contact Form ======================== */
+/* ========================  14. Contact Form ======================== */
 #form ol li{
   padding: .5rem 0;
 }
@@ -819,9 +780,9 @@ footer div p.caption{
   margin: 0 auto;
 }
 
-/* ========================  16. Media queries ======================== */
-/* Note: 360px minimum supported resolution */
-
+/* ========================  15. Media queries ======================== */
+/* ==================================================================== */
+/* ============= Note: 360px minimum supported resolution ============= */
 
 /* ============== 512px Break Point 0: Extra Extra small ============== */
 @media screen and (min-width: 32em) { 
@@ -838,10 +799,13 @@ footer div p.caption{
     display: block;
   }
 
-  /* Project grid resize */
-  .project-grid-col{
-    width: 47.7%;
-    margin: 16px 0;
+  /* Flex grid resize */
+  .flex-col-2{
+    width: 100%;
+  }
+  
+  .flex-col-3{
+    width: 50%;
   }
 
 }
@@ -850,35 +814,19 @@ footer div p.caption{
 /* ================ 840px Break Point 2: Small ================ */
 @media screen and (min-width: 52.4em) { 
 
-  /* project showcase */
-  .project-showcase-description{
-    display: inline-block;
-    width: 50%;
-    float: left;
-  }
-
-  .project-showcase-picture{
-    display: inline-block;
-    width: 50%;
-    float: right;
-  }
-
-  .project-showcase-picture img{
-    padding: 3rem 0 3rem 1rem;
-    width: 100%;
-  }
-
-
 }
 
 
 /* ================ 960px Break Point 3: Medium ================ */
 @media screen and (min-width: 60em) {
 
-  /* Project grid resize */
-  .project-grid-col{
-    width: 31.2%;
-    margin: 16px 0;
+  /* Flex grid resize */
+  .flex-col-2{
+    width: 50%;
+  }
+  
+  .flex-col-3{
+    width: 33.3%;
   }
 
 }
