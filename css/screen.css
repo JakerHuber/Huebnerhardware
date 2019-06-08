@@ -436,6 +436,11 @@ footer div p.caption{
 }
 
 /* ==========================  7. Formatting ========================== */
+/* Display */
+.inline{
+  display: inline-block;
+}
+
 /* Alignment */
 .left{
   float: left;
@@ -461,6 +466,12 @@ footer div p.caption{
 
 .aligncenter{
   text-align: center;
+}
+
+.alignmiddle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Show and Hide classes */
@@ -505,6 +516,18 @@ footer div p.caption{
   padding: 2rem 0 2rem 0;
 }
 
+.padleft{
+  padding: 0 1rem 0 0;
+}
+
+.padright{
+  padding: 0 0 0 1rem;
+}
+
+.padleftright{
+  padding: 0 .5rem 0 .5rem;
+}
+
 .padvertical{
   padding: .5rem 0;
 }
@@ -539,6 +562,7 @@ footer div p.caption{
 /* Links */
 .clean{
   text-decoration: none;
+  color: black;
 }
 
 .relative{
@@ -661,6 +685,18 @@ footer div p.caption{
 .formitem{
   width: 100%;
   padding: .5rem;
+}
+
+.linkedin{
+  color: #4875B4;
+}
+
+.github{
+  color: #6cc644;
+}
+
+.mailto{
+  color: black;
 }
 
 /* ========================  13. Media queries ======================== */
