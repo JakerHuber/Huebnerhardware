@@ -368,6 +368,10 @@ footer div p.caption{
   padding: 2rem 0 2rem 0;
 }
 
+.padvertical{
+  padding: .5rem 0;
+}
+
 /* Images */
 .small-img{
   max-width: 255px;
@@ -379,6 +383,11 @@ footer div p.caption{
 
 .banner-img{
   width: 700px;
+}
+
+/* Containers */
+.medium-item{
+  max-width: 720px;
 }
 
 /* Frame */
@@ -560,12 +569,12 @@ footer div p.caption{
   outline: none;
 }
 
-/* ========================= 12. Bio ========================== */
+/* ========================= 12. Bio page ========================== */
 .bio-description{
   max-width: 840px;
 }
 
-/* ======================== 13. project items ========================= */
+/* ======================== 13. Projects page ========================= */
 /* slide down description */
 .project-item-content{
   position: absolute;
@@ -591,19 +600,10 @@ footer div p.caption{
   background: transparent;
 }
 
-/* ========================  14. Contact Form ======================== */
-#form ol li{
-  padding: .5rem 0;
-}
-
-#form ol li input , #form ol li textarea{
+/* ========================  14. Contact page ======================== */
+.formitem{
   width: 100%;
   padding: .5rem;
-}
-
-#formpaper{
-  max-width: 720px;
-  margin: 0 auto;
 }
 
 /* ========================  15. Media queries ======================== */
