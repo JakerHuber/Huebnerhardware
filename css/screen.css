@@ -373,6 +373,10 @@ footer div p.caption{
   max-width: 255px;
 }
 
+.medium-img{
+  max-width: 512px;
+}
+
 /* Frame */
 .frame{
   padding: 1rem 1rem;
