@@ -493,7 +493,6 @@ footer div p.caption{
   transition-delay: 0.3s;
 }
 
-/* Padding */
 .padtop{
   padding: 2rem 0 0 0;
 }
@@ -530,7 +529,33 @@ footer div p.caption{
 
 /* Frame */
 .frame{
-  padding: 1rem 1rem;
+  padding: 1rem;
+}
+
+.frame-medium{
+  padding: 2rem;
+}
+
+/* Links */
+.clean{
+  text-decoration: none;
+}
+
+.relative{
+  position: relative;
+}
+
+/* expansion button */
+.expand-button{
+  margin: 1rem;
+  padding: 0rem;
+  transition: 0.3s;
+}
+
+.expand-button:hover{
+  margin: 0rem;
+  padding: 1rem;
+  font-size: 120%;
 }
 
 /* ======================== 8. Flex grid ========================= */
