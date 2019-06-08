@@ -20,12 +20,12 @@ Table of Contents:
 11. Projects page
 12. Contact page
 13. Media queries
-	13.1. 600px Break Point 1: Extra small
-	13.2. 960px Break Point 2: Medium
-	13.3. 1280px Break Point 3: Medium-large
-	13.4. 1440px Break Point 4: Medium-large
-	13.5. 1600px Break Point 5: Extra large
-	13.6. 1920px Break Point 6: extra-large
+13.1. 600px Break Point 1: Extra small
+13.2. 960px Break Point 2: Medium
+13.3. 1280px Break Point 3: Medium-large
+13.4. 1440px Break Point 4: Medium-large
+13.5. 1600px Break Point 5: Extra large
+13.6. 1920px Break Point 6: extra-large
 */
 
 /* ===================  1. Main HTML Structure =================== */
@@ -668,12 +668,18 @@ footer div p.caption{
   }
 
   /* Flex grid resize */
-  .flex-col-2{
-    width: 100%;
+  .flex-col-3{
+    width: calc(100%/2 - (1rem * 1));
   }
 
-  .flex-col-3{
-    width: 50%;
+  /* vertical gutter */
+  .flex-col-3:nth-child(even){
+    margin: 0 0 0 1rem;
+  }
+
+  /* horizontal gutter */
+  .flex-col-3:nth-child(n+2){
+    margin: 1rem 0 0 0;
   }
 
 }
@@ -683,11 +689,21 @@ footer div p.caption{
 
   /* Flex grid resize */
   .flex-col-2{
-    width: 50%;
+    width: calc(100%/2 - (1rem * 2));
   }
 
   .flex-col-3{
-    width: 33.3%;
+    width: calc(100%/3 - (1rem * 2));
+  }
+
+  /* vertical gutter */
+  .flex-col-3:not(:nth-child(3)){
+    margin: 0 1rem 0 0;
+  }
+
+  /* horizontal gutter */
+  .flex-col-3:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)){
+    margin: 1rem 0 0 0;
   }
 
 }
