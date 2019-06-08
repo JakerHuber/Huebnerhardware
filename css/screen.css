@@ -2,12 +2,32 @@
 CSS to add styling for entire site.
 Programmers: Jacob Huebner
 File Name: screens.css
-*/
 
-/*
 Material design scale
 https://material.io/design/typography/the-type-system.html#type-scale
+
+Table of Contents:
+1. Main HTML Structure
+2. Scaled fonts
+3. Responsive Media
+4. Navigation
+5. Footer
+6. Drawer
+7. Formatting
+8. Flex grid
+9. Colors
+10. Bio page
+11. Projects page
+12. Contact page
+13. Media queries
+	13.1. 600px Break Point 1: Extra small
+	13.2. 960px Break Point 2: Medium
+	13.3. 1280px Break Point 3: Medium-large
+	13.4. 1440px Break Point 4: Medium-large
+	13.5. 1600px Break Point 5: Extra large
+	13.6. 1920px Break Point 6: extra-large
 */
+
 /* ===================  1. Main HTML Structure =================== */
 
 *, *:before, *:after{
@@ -297,161 +317,7 @@ footer div p.caption{
   padding-left: 1rem;
 }
 
-/* ==========================  6. Formatting ========================== */
-/* Alignment */
-.left{
-  float: left;
-  cursor: pointer;
-}
-
-.right{
-  float: right;
-  cursor: pointer;
-}
-
-.center{
-  margin: 0 auto;
-}
-
-.alignleft{
-  text-align: left;
-}
-
-.alignright{
-  text-align: right;
-}
-
-.aligncenter{
-  text-align: center;
-}
-
-/* Show and Hide classes */
-.show{
-  display: block;
-}
-
-.hide{
-  display: none;
-}
-
-/* Shadows */
-.dropshadow0{
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-.dropshadow1{
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.hovershadow{
-  transition: .5s;
-}
-
-.hovershadow:hover{
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-.hoverdelay{
-  transition-delay: 0.3s;
-}
-
-/* Padding */
-.padtop{
-  padding: 2rem 0 0 0;
-}
-
-.padbottom{
-  padding: 0 0 2rem 0;
-}
-
-.padtopbottom{
-  padding: 2rem 0 2rem 0;
-}
-
-.padvertical{
-  padding: .5rem 0;
-}
-
-/* Images */
-.small-img{
-  max-width: 255px;
-}
-
-.medium-img{
-  max-width: 512px;
-}
-
-.banner-img{
-  width: 700px;
-}
-
-/* Containers */
-.medium-item{
-  max-width: 720px;
-}
-
-/* Frame */
-.frame{
-  padding: 1rem 1rem;
-}
-
-/* ======================== 7. Flex grid ========================= */
-.flex{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.flex img{
-  width: 100%;
-}
-
-/* flex two columns */
-.flex-col-2{
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-/* flex three columns */
-.flex-col-3{
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-/* ============================  8. Colors ============================ */
-/* colors */
-.white{
-  background-color: white;
-}
-
-.darkergrey{
-  background-color: #c3c3c3;
-}
-
-.darkgrey{
-  background-color: #d4d4d4;
-}
-
-.grey{
-  background-color: #e5e5e5;
-}
-
-.lightgrey{
-  background-color: #f5f5f5;
-}
-
-.red{
-  color: red;
-}
-
-.green{
-  color: green;
-}
-
-/* ======================== 9. Drawer ============================== */
+/* ======================== 6. Drawer ============================== */
 /* drawer buttons */
 .drawerbtn{
   border: 0;
@@ -569,12 +435,166 @@ footer div p.caption{
   outline: none;
 }
 
-/* ========================= 12. Bio page ========================== */
+/* ==========================  7. Formatting ========================== */
+/* Alignment */
+.left{
+  float: left;
+  cursor: pointer;
+}
+
+.right{
+  float: right;
+  cursor: pointer;
+}
+
+.center{
+  margin: 0 auto;
+}
+
+.alignleft{
+  text-align: left;
+}
+
+.alignright{
+  text-align: right;
+}
+
+.aligncenter{
+  text-align: center;
+}
+
+/* Show and Hide classes */
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
+/* Shadows */
+.dropshadow0{
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.dropshadow1{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.hovershadow{
+  transition: .5s;
+}
+
+.hovershadow:hover{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.hoverdelay{
+  transition-delay: 0.3s;
+}
+
+/* Padding */
+.padtop{
+  padding: 2rem 0 0 0;
+}
+
+.padbottom{
+  padding: 0 0 2rem 0;
+}
+
+.padtopbottom{
+  padding: 2rem 0 2rem 0;
+}
+
+.padvertical{
+  padding: .5rem 0;
+}
+
+/* Images */
+.small-img{
+  max-width: 255px;
+}
+
+.medium-img{
+  max-width: 512px;
+}
+
+.banner-img{
+  width: 700px;
+}
+
+/* Containers */
+.medium-item{
+  max-width: 720px;
+}
+
+/* Frame */
+.frame{
+  padding: 1rem 1rem;
+}
+
+/* ======================== 8. Flex grid ========================= */
+.flex{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.flex img{
+  width: 100%;
+}
+
+/* flex two columns */
+.flex-col-2{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* flex three columns */
+.flex-col-3{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* ============================  9. Colors ============================ */
+/* colors */
+.white{
+  background-color: white;
+}
+
+.darkergrey{
+  background-color: #c3c3c3;
+}
+
+.darkgrey{
+  background-color: #d4d4d4;
+}
+
+.grey{
+  background-color: #e5e5e5;
+}
+
+.lightgrey{
+  background-color: #f5f5f5;
+}
+
+.red{
+  color: red;
+}
+
+.green{
+  color: green;
+}
+
+/* ========================= 10. Bio page ========================== */
 .bio-description{
   max-width: 840px;
 }
 
-/* ======================== 13. Projects page ========================= */
+/* ======================== 11. Projects page ========================= */
 /* slide down description */
 .project-item-content{
   position: absolute;
@@ -600,20 +620,17 @@ footer div p.caption{
   background: transparent;
 }
 
-/* ========================  14. Contact page ======================== */
+/* ========================  12. Contact page ======================== */
 .formitem{
   width: 100%;
   padding: .5rem;
 }
 
-/* ========================  15. Media queries ======================== */
+/* ========================  13. Media queries ======================== */
 /* ==================================================================== */
-/* ============= Note: 360px minimum supported resolution ============= */
-
-/* ============== 512px Break Point 0: Extra Extra small ============== */
-@media screen and (min-width: 32em) { 
-
-}
+/* Notes: 360px minimum supported resolution. */
+/* Preferred Possible Break Points: 512px, 600px, 840px, 960px,         */
+/* 1280px, 1440px, 1600px, 1920px.                                      */
 
 /* ================ 600px Break Point 1: Extra small ================ */
 @media screen and (min-width: 38.2em) { 
@@ -629,35 +646,28 @@ footer div p.caption{
   .flex-col-2{
     width: 100%;
   }
-  
+
   .flex-col-3{
     width: 50%;
   }
 
 }
 
-
-/* ================ 840px Break Point 2: Small ================ */
-@media screen and (min-width: 52.4em) { 
-
-}
-
-
-/* ================ 960px Break Point 3: Medium ================ */
+/* ================ 960px Break Point 2: Medium ================ */
 @media screen and (min-width: 60em) {
 
   /* Flex grid resize */
   .flex-col-2{
     width: 50%;
   }
-  
+
   .flex-col-3{
     width: 33.3%;
   }
 
 }
 
-/* ================ 1280px Break Point 4: Medium-large ================ */
+/* ================ 1280px Break Point 3: Medium-large ================ */
 @media screen and (min-width: 80em) { 
 
   /* limit size of content area */
@@ -673,7 +683,7 @@ footer div p.caption{
 
 }
 
-/* ================ 1440px Break Point 5: Medium-large ================ */
+/* ================ 1440px Break Point 4: Medium-large ================ */
 @media screen and (min-width: 90em) { 
 
   /* hide hamburger menu */
@@ -695,7 +705,7 @@ footer div p.caption{
 
 }
 
-/* =============== 1600px Break Point 6: Extra large =============== */
+/* =============== 1600px Break Point 5: Extra large =============== */
 @media screen and (min-width: 100em) {
 
   /* limit size of content area */
@@ -711,7 +721,7 @@ footer div p.caption{
 
 }
 
-/* ================ 1920px Break Point 4: extra-large ================ */
+/* ================ 1920px Break Point 6: extra-large ================ */
 @media screen and (min-width: 120em) {
 
   /* limit size of content area */

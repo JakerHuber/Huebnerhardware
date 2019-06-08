@@ -1,5 +1,11 @@
-/* ======================= 10. Card Flip ============================= */
-/* credit Hakim El Hattab */
+/*
+CSS to add cardflip item and cardflip animation.
+Programmers: Jacob Huebner
+File Name: cardflip.css
+
+Credit: Hakim El Hattab 
+*/
+
 #greetingcardbox{
   position: relative;
   z-index: 0;
