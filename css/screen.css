@@ -571,15 +571,18 @@ footer div p.caption{
 
 /* expansion button */
 .expand-button{
-  margin: 1rem;
+  margin: 2rem;
   padding: 0rem;
   transition: 0.3s;
+  position: relative;
+  z-index: 3;
 }
 
 .expand-button:hover{
-  margin: 0rem;
+  margin: 1rem;
   padding: 1rem;
   font-size: 120%;
+  position: relative;
 }
 
 /* ======================== 8. Flex grid ========================= */
