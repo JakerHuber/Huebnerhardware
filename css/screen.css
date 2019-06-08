@@ -377,6 +377,10 @@ footer div p.caption{
   max-width: 512px;
 }
 
+.banner-img{
+  width: 700px;
+}
+
 /* Frame */
 .frame{
   padding: 1rem 1rem;
