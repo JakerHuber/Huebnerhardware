@@ -687,6 +687,12 @@ footer div p.caption{
   background: transparent;
 }
 
+/* max height for img */
+.maxheight{
+  width: auto;
+  max-height: 500px;
+}
+
 /* ========================  12. Contact page ======================== */
 .formitem{
   width: 100%;
