@@ -575,7 +575,6 @@ footer div p.caption{
   padding: 0rem;
   transition: 0.3s;
   position: relative;
-  z-index: 3;
 }
 
 .expand-button:hover{
