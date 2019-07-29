@@ -726,11 +726,11 @@ footer div p.caption{
     text-align: right;
     display: block;
   }
-
+  
   /* Flex grid resize */
   /* flex three columns */
   .flex-col-3{
-    width: calc(100%/2 - (1rem * 1));
+    width: calc(100%/2 - (1rem * .5));
   }
 
   /* vertical gutter */
@@ -746,7 +746,7 @@ footer div p.caption{
   /* Flex grid resize */
   /* flex two columns */
   .flex-col-2{
-    width: calc(100%/2 - (1rem * 2));
+    width: calc(100%/2 - (1rem * .5));
   }
 
   /* vertical gutter */
@@ -756,7 +756,7 @@ footer div p.caption{
 
   /* flex three columns */
   .flex-col-3{
-    width: calc(100%/3 - (1rem * 2));
+    width: calc(100%/3 - (1rem * .67));
   }
 
   /* remove old vertical gutter */
