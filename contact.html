@@ -13,6 +13,7 @@
     <link rel="stylesheet" media="screen" href="css/resets.css" />
     <link rel="stylesheet" media="screen" href="css/screen.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/js_contact.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -66,14 +67,15 @@
             <div class="white frame dropshadow0 center medium-item">
               <div class="container frame">
                 <!-- form begin -->
-                <form id="form" action="mailto:jhuebner@hawk.iit.edu" method="post" enctype="text/plain" autocomplete="on">
+                <!-- enctype="text/plain" -->
+                <form id="contact-form" method="post" onsubmit="submitToAPI(event)" autocomplete="on">
                   <h3 class="margintop">Contact Me</h3>
                   <p class="margin">You can send me a message by filling out the boxes below.</p>
                   <ol>
-                    <li class="padvertical"><input type="text" name="first_name" id="firstname" class="formitem" placeholder="First Name" required></li>
-                    <li class="padvertical"><input type="text" name="last_name" id="lastname" class="formitem" placeholder="Last Name"></li>
-                    <li class="padvertical"><input type="email" name="email" id="email" class="formitem" pattern="^.+@.+$" placeholder="Email address" required></li>
-                    <li class="padvertical"><textarea name="comments" id="message" class="formitem" rows="4" cols="50" maxlength="500" placeholder="Message here..."  wrap="hard" required></textarea></li>
+                    <li class="padvertical"><input type="text" name="name-input" id="name-input" class="formitem" placeholder="Name" required></li>
+                    <li class="padvertical"><input type="phone" name="phone-input" id="phone-input" class="formitem" placeholder="Phone number"></li>
+                    <li class="padvertical"><input type="email" name="email-input" id="email-input" class="formitem" pattern="^.+@.+$" placeholder="Email address" required></li>
+                    <li class="padvertical"><textarea name="description-input" id="description-input" class="formitem" rows="4" cols="50" maxlength="500" placeholder="Message here..."  wrap="hard" required></textarea></li>
                     <li class="padvertical"><input type="submit" name="submit" id="submit" class="button formitem" value="Send Message"></li>
                   </ol>
                 </form>

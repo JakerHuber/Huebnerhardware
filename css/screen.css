@@ -676,6 +676,14 @@ footer div p.caption{
   max-width: 840px;
 }
 
+.flipable-pic-top{
+  display: none;
+}
+
+.flipable-pic-bottom{
+  display: block; 
+}
+
 /* ======================== 11. Projects page ========================= */
 /* slide down description */
 .project-item-content{
@@ -783,7 +791,16 @@ footer div p.caption{
   .flex-col-3:not(:nth-child(3n)){
     margin-right: 1rem;
   }
-
+  
+  /* flippable picture top */
+  .flipable-pic-top{
+    display: block;
+  }
+  
+  /* flippable picture bottom */
+  .flipable-pic-bottom{
+    display: none; 
+  }
 
 }
 
